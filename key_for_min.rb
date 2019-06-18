@@ -31,7 +31,9 @@ grocery = {apples: 5, carrots: 7, mangoes: 3, bananas: 6}
 ice_cream= {}
 
 def key_for_min_value(hash)
-  
+  if hash.empty?
+    nil
+  else
   # Iterates over the hash
   list_item = hash.each{|key, value| "Item: #{key} quantity: #{value}"}
   # Returns - {:apples=>5, :carrots=>7, :mangoes=>3, :bananas=>6}
@@ -40,4 +42,5 @@ def key_for_min_value(hash)
   # Returns - [:mangoes, 3]
   
   least_item[0]
+  end
 end
